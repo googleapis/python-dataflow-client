@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://www.github.com/googleapis/python-dataflow-client/compare/v0.1.2...v0.2.0) (2021-07-24)
+
+
+### Features
+
+* add Samples section to CONTRIBUTING.rst ([#14](https://www.github.com/googleapis/python-dataflow-client/issues/14)) ([998adbe](https://www.github.com/googleapis/python-dataflow-client/commit/998adbe0a2684d658303a860805027b83a75b520))
+
+
+### Bug Fixes
+
+* enable self signed jwt for grpc ([#18](https://www.github.com/googleapis/python-dataflow-client/issues/18)) ([0a69423](https://www.github.com/googleapis/python-dataflow-client/commit/0a69423ccf2229f7fe00c2c778aec8992bfbb24d))
+
 ### [0.1.2](https://www.github.com/googleapis/python-dataflow-client/compare/v0.1.1...v0.1.2) (2021-07-21)
 
 
