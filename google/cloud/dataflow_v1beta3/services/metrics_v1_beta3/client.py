@@ -16,7 +16,7 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -428,7 +428,7 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_get_job_metrics():
                 # Create a client
@@ -507,7 +507,7 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_get_job_execution_details():
                 # Create a client
@@ -594,7 +594,7 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_get_stage_execution_details():
                 # Create a client

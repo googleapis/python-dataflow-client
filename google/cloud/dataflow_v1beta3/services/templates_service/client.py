@@ -16,7 +16,7 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -421,7 +421,7 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_create_job_from_template():
                 # Create a client
@@ -489,7 +489,7 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_launch_template():
                 # Create a client
@@ -556,7 +556,7 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_get_template():
                 # Create a client

@@ -16,7 +16,7 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -419,7 +419,7 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_get_snapshot():
                 # Create a client
@@ -484,7 +484,7 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_delete_snapshot():
                 # Create a client
@@ -548,7 +548,7 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import dataflow_v1beta3
+                    from google.cloud import dataflow_v1beta3
 
             def sample_list_snapshots():
                 # Create a client
