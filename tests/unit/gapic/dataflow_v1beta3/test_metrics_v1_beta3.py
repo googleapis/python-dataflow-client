@@ -1810,7 +1810,6 @@ def test_metrics_v1_beta3_transport_auth_adc(transport_class):
     [
         transports.MetricsV1Beta3GrpcTransport,
         transports.MetricsV1Beta3GrpcAsyncIOTransport,
-        transports.MetricsV1Beta3RestTransport,
     ],
 )
 def test_metrics_v1_beta3_transport_auth_gdch_credentials(transport_class):

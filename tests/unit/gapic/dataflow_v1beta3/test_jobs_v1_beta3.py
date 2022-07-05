@@ -2492,7 +2492,6 @@ def test_jobs_v1_beta3_transport_auth_adc(transport_class):
     [
         transports.JobsV1Beta3GrpcTransport,
         transports.JobsV1Beta3GrpcAsyncIOTransport,
-        transports.JobsV1Beta3RestTransport,
     ],
 )
 def test_jobs_v1_beta3_transport_auth_gdch_credentials(transport_class):

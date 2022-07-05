@@ -1302,7 +1302,6 @@ def test_messages_v1_beta3_transport_auth_adc(transport_class):
     [
         transports.MessagesV1Beta3GrpcTransport,
         transports.MessagesV1Beta3GrpcAsyncIOTransport,
-        transports.MessagesV1Beta3RestTransport,
     ],
 )
 def test_messages_v1_beta3_transport_auth_gdch_credentials(transport_class):

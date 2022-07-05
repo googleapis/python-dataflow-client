@@ -1413,7 +1413,6 @@ def test_snapshots_v1_beta3_transport_auth_adc(transport_class):
     [
         transports.SnapshotsV1Beta3GrpcTransport,
         transports.SnapshotsV1Beta3GrpcAsyncIOTransport,
-        transports.SnapshotsV1Beta3RestTransport,
     ],
 )
 def test_snapshots_v1_beta3_transport_auth_gdch_credentials(transport_class):

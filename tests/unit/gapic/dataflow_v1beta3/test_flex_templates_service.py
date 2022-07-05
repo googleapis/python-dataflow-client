@@ -1099,7 +1099,6 @@ def test_flex_templates_service_transport_auth_adc(transport_class):
     [
         transports.FlexTemplatesServiceGrpcTransport,
         transports.FlexTemplatesServiceGrpcAsyncIOTransport,
-        transports.FlexTemplatesServiceRestTransport,
     ],
 )
 def test_flex_templates_service_transport_auth_gdch_credentials(transport_class):
