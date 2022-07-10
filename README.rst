@@ -3,7 +3,7 @@ Python Client for Dataflow API
 
 |preview| |pypi| |versions|
 
-`Dataflow API`_: 
+`Dataflow API`_: Unified stream and batch data processing that's serverless, fast, and cost-effective.
 
 - `Client Library Documentation`_
 - `Product Documentation`_
