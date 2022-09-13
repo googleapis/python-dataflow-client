@@ -139,27 +139,6 @@ class JobsV1Beta3RestInterceptor:
         """
         return response
 
-    def pre_check_active_jobs(
-        self, request: jobs.CheckActiveJobsRequest, metadata: Sequence[Tuple[str, str]]
-    ) -> Tuple[jobs.CheckActiveJobsRequest, Sequence[Tuple[str, str]]]:
-        """Pre-rpc interceptor for check_active_jobs
-
-        Override in a subclass to manipulate the request or metadata
-        before they are sent to the JobsV1Beta3 server.
-        """
-        return request, metadata
-
-    def post_check_active_jobs(
-        self, response: jobs.CheckActiveJobsResponse
-    ) -> jobs.CheckActiveJobsResponse:
-        """Post-rpc interceptor for check_active_jobs
-
-        Override in a subclass to manipulate the response
-        after it is returned by the JobsV1Beta3 server but before
-        it is returned to user code.
-        """
-        return response
-
     def pre_create_job(
         self, request: jobs.CreateJobRequest, metadata: Sequence[Tuple[str, str]]
     ) -> Tuple[jobs.CreateJobRequest, Sequence[Tuple[str, str]]]:
@@ -428,7 +407,7 @@ class JobsV1Beta3RestTransport(JobsV1Beta3Transport):
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
-                params=rest_helpers.flatten_query_params(query_params),
+                params=rest_helpers.flatten_query_params(query_params, strict=True),
             )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
@@ -534,7 +513,7 @@ class JobsV1Beta3RestTransport(JobsV1Beta3Transport):
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
-                params=rest_helpers.flatten_query_params(query_params),
+                params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
             )
 
@@ -616,7 +595,7 @@ class JobsV1Beta3RestTransport(JobsV1Beta3Transport):
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
-                params=rest_helpers.flatten_query_params(query_params),
+                params=rest_helpers.flatten_query_params(query_params, strict=True),
             )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
@@ -701,7 +680,7 @@ class JobsV1Beta3RestTransport(JobsV1Beta3Transport):
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
-                params=rest_helpers.flatten_query_params(query_params),
+                params=rest_helpers.flatten_query_params(query_params, strict=True),
             )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
@@ -789,7 +768,7 @@ class JobsV1Beta3RestTransport(JobsV1Beta3Transport):
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
-                params=rest_helpers.flatten_query_params(query_params),
+                params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
             )
 
@@ -880,7 +859,7 @@ class JobsV1Beta3RestTransport(JobsV1Beta3Transport):
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
-                params=rest_helpers.flatten_query_params(query_params),
+                params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
             )
 

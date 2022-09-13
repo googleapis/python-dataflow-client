@@ -38,6 +38,7 @@ from google.protobuf import json_format
 from google.protobuf import timestamp_pb2  # type: ignore
 import grpc
 from grpc.experimental import aio
+from proto.marshal.rules import wrappers
 from proto.marshal.rules.dates import DurationRule, TimestampRule
 import pytest
 from requests import PreparedRequest, Request, Response
