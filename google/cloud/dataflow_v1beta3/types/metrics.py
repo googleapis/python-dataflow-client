@@ -121,7 +121,7 @@ class MetricUpdate(proto.Message):
             kind. This holds the count of the aggregated values and is
             used in combination with mean_sum above to obtain the actual
             mean aggregate value. The only possible value type is Long.
-        set_ (google.protobuf.struct_pb2.Value):
+        set (google.protobuf.struct_pb2.Value):
             Worker-computed aggregate value for the "Set"
             aggregation kind.  The only possible value type
             is a list of Values whose type can be Long,
@@ -174,7 +174,7 @@ class MetricUpdate(proto.Message):
         number=6,
         message=struct_pb2.Value,
     )
-    set_ = proto.Field(
+    set = proto.Field(
         proto.MESSAGE,
         number=7,
         message=struct_pb2.Value,
