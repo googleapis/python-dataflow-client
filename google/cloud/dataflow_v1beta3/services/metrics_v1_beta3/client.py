@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -62,7 +73,7 @@ class MetricsV1Beta3ClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[MetricsV1Beta3Transport]:
         """Returns an appropriate transport class.
 
@@ -317,7 +328,7 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, MetricsV1Beta3Transport, None] = None,
+        transport: Optional[Union[str, MetricsV1Beta3Transport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -418,10 +429,10 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
 
     def get_job_metrics(
         self,
-        request: Union[metrics.GetJobMetricsRequest, dict] = None,
+        request: Optional[Union[metrics.GetJobMetricsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> metrics.JobMetrics:
         r"""Request the job status.
@@ -520,10 +531,10 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
 
     def get_job_execution_details(
         self,
-        request: Union[metrics.GetJobExecutionDetailsRequest, dict] = None,
+        request: Optional[Union[metrics.GetJobExecutionDetailsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> pagers.GetJobExecutionDetailsPager:
         r"""Request detailed information about the execution
@@ -624,10 +635,10 @@ class MetricsV1Beta3Client(metaclass=MetricsV1Beta3ClientMeta):
 
     def get_stage_execution_details(
         self,
-        request: Union[metrics.GetStageExecutionDetailsRequest, dict] = None,
+        request: Optional[Union[metrics.GetStageExecutionDetailsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> pagers.GetStageExecutionDetailsPager:
         r"""Request detailed information about the execution

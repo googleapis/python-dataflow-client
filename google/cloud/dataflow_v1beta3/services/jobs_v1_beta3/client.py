@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -61,7 +72,7 @@ class JobsV1Beta3ClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[JobsV1Beta3Transport]:
         """Returns an appropriate transport class.
 
@@ -317,7 +328,7 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, JobsV1Beta3Transport, None] = None,
+        transport: Optional[Union[str, JobsV1Beta3Transport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -418,10 +429,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def create_job(
         self,
-        request: Union[jobs.CreateJobRequest, dict] = None,
+        request: Optional[Union[jobs.CreateJobRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> jobs.Job:
         r"""Creates a Cloud Dataflow job.
@@ -509,10 +520,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def get_job(
         self,
-        request: Union[jobs.GetJobRequest, dict] = None,
+        request: Optional[Union[jobs.GetJobRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> jobs.Job:
         r"""Gets the state of the specified Cloud Dataflow job.
@@ -601,10 +612,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def update_job(
         self,
-        request: Union[jobs.UpdateJobRequest, dict] = None,
+        request: Optional[Union[jobs.UpdateJobRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> jobs.Job:
         r"""Updates the state of an existing Cloud Dataflow job.
@@ -694,10 +705,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def list_jobs(
         self,
-        request: Union[jobs.ListJobsRequest, dict] = None,
+        request: Optional[Union[jobs.ListJobsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> pagers.ListJobsPager:
         r"""List the jobs of a project.
@@ -806,10 +817,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def aggregated_list_jobs(
         self,
-        request: Union[jobs.ListJobsRequest, dict] = None,
+        request: Optional[Union[jobs.ListJobsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> pagers.AggregatedListJobsPager:
         r"""List the jobs of a project across all regions.
@@ -907,10 +918,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def check_active_jobs(
         self,
-        request: Union[jobs.CheckActiveJobsRequest, dict] = None,
+        request: Optional[Union[jobs.CheckActiveJobsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> jobs.CheckActiveJobsResponse:
         r"""Check for existence of active jobs in the given
@@ -980,10 +991,10 @@ class JobsV1Beta3Client(metaclass=JobsV1Beta3ClientMeta):
 
     def snapshot_job(
         self,
-        request: Union[jobs.SnapshotJobRequest, dict] = None,
+        request: Optional[Union[jobs.SnapshotJobRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> snapshots.Snapshot:
         r"""Snapshot the state of a streaming job.

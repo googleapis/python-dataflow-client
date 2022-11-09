@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -62,7 +73,7 @@ class TemplatesServiceClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[TemplatesServiceTransport]:
         """Returns an appropriate transport class.
 
@@ -317,7 +328,7 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, TemplatesServiceTransport, None] = None,
+        transport: Optional[Union[str, TemplatesServiceTransport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -418,10 +429,10 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
 
     def create_job_from_template(
         self,
-        request: Union[templates.CreateJobFromTemplateRequest, dict] = None,
+        request: Optional[Union[templates.CreateJobFromTemplateRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> jobs.Job:
         r"""Creates a Cloud Dataflow job from a template.
@@ -504,10 +515,10 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
 
     def launch_template(
         self,
-        request: Union[templates.LaunchTemplateRequest, dict] = None,
+        request: Optional[Union[templates.LaunchTemplateRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> templates.LaunchTemplateResponse:
         r"""Launch a template.
@@ -589,10 +600,10 @@ class TemplatesServiceClient(metaclass=TemplatesServiceClientMeta):
 
     def get_template(
         self,
-        request: Union[templates.GetTemplateRequest, dict] = None,
+        request: Optional[Union[templates.GetTemplateRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> templates.GetTemplateResponse:
         r"""Get the template associated with a template.

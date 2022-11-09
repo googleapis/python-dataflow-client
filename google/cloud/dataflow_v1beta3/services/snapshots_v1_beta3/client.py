@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -62,7 +73,7 @@ class SnapshotsV1Beta3ClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[SnapshotsV1Beta3Transport]:
         """Returns an appropriate transport class.
 
@@ -317,7 +328,7 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, SnapshotsV1Beta3Transport, None] = None,
+        transport: Optional[Union[str, SnapshotsV1Beta3Transport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -418,10 +429,10 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
 
     def get_snapshot(
         self,
-        request: Union[snapshots.GetSnapshotRequest, dict] = None,
+        request: Optional[Union[snapshots.GetSnapshotRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> snapshots.Snapshot:
         r"""Gets information about a snapshot.
@@ -502,10 +513,10 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
 
     def delete_snapshot(
         self,
-        request: Union[snapshots.DeleteSnapshotRequest, dict] = None,
+        request: Optional[Union[snapshots.DeleteSnapshotRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> snapshots.DeleteSnapshotResponse:
         r"""Deletes a snapshot.
@@ -585,10 +596,10 @@ class SnapshotsV1Beta3Client(metaclass=SnapshotsV1Beta3ClientMeta):
 
     def list_snapshots(
         self,
-        request: Union[snapshots.ListSnapshotsRequest, dict] = None,
+        request: Optional[Union[snapshots.ListSnapshotsRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> snapshots.ListSnapshotsResponse:
         r"""Lists snapshots.
