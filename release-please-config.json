@@ -7,6 +7,11 @@
         "google/cloud/dataflow/gapic_version.py",
         {
           "type": "json",
+          "path": "samples/generated_samples/snippet_metadata_google.dataflow.v1beta3.json",
+          "jsonpath": "$.clientLibrary.version"
+        },
+        {
+          "type": "json",
           "path": "samples/generated_samples/snippet_metadata_dataflow_v1beta3.json",
           "jsonpath": "$.clientLibrary.version"
         }
