@@ -176,7 +176,7 @@ class MetricUpdate(proto.Message):
         number=6,
         message=struct_pb2.Value,
     )
-    set: struct_pb2.Value = proto.Field(
+    set_: struct_pb2.Value = proto.Field(
         proto.MESSAGE,
         number=7,
         message=struct_pb2.Value,
